@@ -11,8 +11,8 @@ export default function SloganGenerator() {
         <label>
           Hello! I am a flight assistant. You can ask me about flights
           (take-offs, landings, status). I can only provide information about
-          today's flghts because that's what's included in the free plan of the
-          API where I get the data from.
+          today&apos;s flights because that&apos;s what&apos;s included in the
+          free plan of the API where I get the data from.
           <input
             value={input}
             onChange={handleInputChange}
@@ -22,11 +22,13 @@ export default function SloganGenerator() {
         <button type="submit">Submit question</button>
       </form>
 
-      <div className="messages">
-        {messages.map((m: Message) => (
-          <div key={m.id}>{m.role !== "data" && m.content}</div>
-        ))}
-      </div>
+      {messages && messages.length > 0 && (
+        <div className="messages">
+          {messages.map((m: Message) => (
+            <div key={m.id}>{m.role !== "data" && m.content}</div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
