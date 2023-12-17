@@ -16,12 +16,32 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+body div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form {
+  max-width: 1000px;
+  margin: 80px auto;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.messages {
+  background-color: aliceblue;
+  padding: 24px;
+  border-radius: 8px;
+  margin: 40px auto;
+  max-width: 1000px;
+  width: 100%;
 }
